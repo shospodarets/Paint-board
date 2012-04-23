@@ -16,27 +16,46 @@
 	<script type="text/javascript" src="js/plugins/colorpicker/eye.js"></script>
 	<script type="text/javascript" src="js/plugins/colorpicker/utils.js"></script>
 	<script type="text/javascript" src="js/main/jquery.main.js"></script>
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-25122884-1']);
-		_gaq.push(['_trackPageview']);
-		(function(){
-			var ga = document.createElement('script');
-			ga.type = 'text/javascript';
-			ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
 </head>
 <body>
 	<div id="wrapper">
-		<div class="container paint-board-wrapper">			<div class="board-wrapper">
-				<div class="board-inner">					<div class="paint-board">						<div class="paint-board-cache paint-board-cache-0"></div>						<div class="paint-board-cache paint-board-cache-1"></div>						<div class="paint-board-cache paint-board-cache-2"></div>						<div class="paint-board-cache paint-board-cache-3"></div>					</div>				</div>
-			</div>			<div class="tool">				<a href="#"><img title="Wash" class="wash" src="images/img-tool-wash.png" alt="Wash" width="64" height="76" /></a>				<a href="#"><img title="Save" class="save" src="images/img-tool-save.png" alt="Save" width="64" height="64" /></a>				<a href="#"><img title="Upload" class="upload" src="images/img-tool-upload.png" alt="Upload" width="64" height="64" /></a>				<a class="undo" title="Undo" href="#"><strong class="not-active"><span>undo</span></strong></a>				<a class="redo" title="Redo" href="#"><strong class="not-active"><span>redo</span></strong></a>				<div class="width-slider-wrapper slider-wrapper">					<dl>						<dt>Stroke width:</dt>						<dd class="width-slider-value slider-value"></dd>					</dl>					<div class="width-slider slider"></div>				</div>				<div class="opacity-slider-wrapper slider-wrapper">					<dl>						<dt>Opacity:</dt>						<dd class="opacity-slider-value slider-value"></dd>					</dl>					<div class="opacity-slider slider"></div>
+		<div class="container paint-board-wrapper">
+			<div class="board-wrapper">
+				<div class="board-inner">
+					<div class="paint-board">
+						<div class="paint-board-cache paint-board-cache-0"></div>
+						<div class="paint-board-cache paint-board-cache-1"></div>
+						<div class="paint-board-cache paint-board-cache-2"></div>
+						<div class="paint-board-cache paint-board-cache-3"></div>
+					</div>
 				</div>
-				<div class="fill-tolerance-slider-wrapper slider-wrapper">					<dl>						<dt>Fill Tolerance:</dt>						<dd class="fill-tolerance-slider-value slider-value"></dd>					</dl>					<div class="fill-tolerance-slider slider"></div>
+			</div>
+			<div class="tool">
+				<a href="#"><img title="Wash" class="wash" src="images/img-tool-wash.png" alt="Wash" width="64" height="76" /></a>
+				<a href="#"><img title="Save" class="save" src="images/img-tool-save.png" alt="Save" width="64" height="64" /></a>
+				<a href="#"><img title="Upload" class="upload" src="images/img-tool-upload.png" alt="Upload" width="64" height="64" /></a>
+				<a class="undo" title="Undo" href="#"><strong class="not-active"><span>undo</span></strong></a>
+				<a class="redo" title="Redo" href="#"><strong class="not-active"><span>redo</span></strong></a>
+				<div class="width-slider-wrapper slider-wrapper">
+					<dl>
+						<dt>Stroke width:</dt>
+						<dd class="width-slider-value slider-value"></dd>
+					</dl>
+					<div class="width-slider slider"></div>
+				</div>
+				<div class="opacity-slider-wrapper slider-wrapper">
+					<dl>
+						<dt>Opacity:</dt>
+						<dd class="opacity-slider-value slider-value"></dd>
+					</dl>
+					<div class="opacity-slider slider"></div>
+				</div>
+				<div class="fill-tolerance-slider-wrapper slider-wrapper">
+					<dl>
+						<dt>Fill Tolerance:</dt>
+						<dd class="fill-tolerance-slider-value slider-value"></dd>
+					</dl>
+					<div class="fill-tolerance-slider slider"></div>
 				</div>
 				<ul class="instruments">
 					<li><a title="Pencil brush" href="#"><img src="images/img-instrument-pencil.png" alt="Pencil brush" width="32" height="32" /></a></li>
@@ -58,27 +77,52 @@
 				</ul>
 				<div class="filters">
 					<div class="column column1">
-						<span class="title">Filters:</span>						<ul>							<li>								<a href="#" rel="invert">Invert</a>							</li>						</ul>					</div>
+						<span class="title">Filters:</span>
+						<ul>
+							<li>
+								<a href="#" rel="invert">Invert</a>
+							</li>
+						</ul>
+					</div>
 					<div class="column column2">
 						<span class="title">Grayscale:</span>
-						<ul>							<li><a rel="grayscale" href="#">default</a></li>
+						<ul>
+							<li><a rel="grayscale" href="#">default</a></li>
 							<li><a rel="luminance" href="#">luminance</a></li>
 							<li><a rel="average" href="#">average</a></li>
 							<li><a rel="red" href="#">red</a></li>
 							<li><a rel="green" href="#">green</a></li>
-							<li><a rel="blue" href="#">blue</a></li>						</ul>
+							<li><a rel="blue" href="#">blue</a></li>
+						</ul>
 					</div>
 					<div class="other-filters">
 						<ul>
-							<li><a href="#">Sepia tone</a></li>							<li><a href="#">Emboss (add gray levels & direction sliders and preview)</a></li>							<li><a href="#">Edge detection</a></li>							<li><a href="#">Posterize (add levels slider and preview)</a></li>							<li><a href="#">Blur (add amounts slider and preview)</a></li>							<li><a href="#">Bright\contrast (add bright\contrast sliders and preview)</a></li>							<li><a href="#">Hue\saturation\lightness (add hue\saturation\lightness sliders and preview)</a></li>							<li><a href="#">Lighten (add amount sliders and preview)</a></li>							<li><a href="#">Solarize</a></li>							<li><a href="#">Noize (add amount sliders and preview)</a></li>							<li><a href="#">Glow (add amount,radius sliders and preview)</a></li>							<li><a href="#">Mosaic (add block size sliders and preview)</a></li>							<li><a href="#">Remove noize</a></li>							<li><a href="#">Pointillize (add radius,density,noize sliders, transparent checkbox and preview)</a></li>
+							<li><a href="#">Sepia tone</a></li>
+							<li><a href="#">Emboss (add gray levels & direction sliders and preview)</a></li>
+							<li><a href="#">Edge detection</a></li>
+							<li><a href="#">Posterize (add levels slider and preview)</a></li>
+							<li><a href="#">Blur (add amounts slider and preview)</a></li>
+							<li><a href="#">Bright\contrast (add bright\contrast sliders and preview)</a></li>
+							<li><a href="#">Hue\saturation\lightness (add hue\saturation\lightness sliders and preview)</a></li>
+							<li><a href="#">Lighten (add amount sliders and preview)</a></li>
+							<li><a href="#">Solarize</a></li>
+							<li><a href="#">Noize (add amount sliders and preview)</a></li>
+							<li><a href="#">Glow (add amount,radius sliders and preview)</a></li>
+							<li><a href="#">Mosaic (add block size sliders and preview)</a></li>
+							<li><a href="#">Remove noize</a></li>
+							<li><a href="#">Pointillize (add radius,density,noize sliders, transparent checkbox and preview)</a></li>
 							<li><a href="#">Unsharpmask (add amount,blur,threshold sliders and preview)</a></li>
 							<li><a href="#">Sharpen (add amount sliders and preview)</a></li>
 							<li><a href="#">Color levels (add R,G,B sliders and preview)</a></li>
 						</ul>
-					</div>				</div>
+					</div>
+				</div>
 				<div class="add-text">
 					<div class="column">
-						<div class="current-text">							<label for="current-text">Text: </label>							<input type="text" id="current-text" value="Text" />						</div>
+						<div class="current-text">
+							<label for="current-text">Text: </label>
+							<input type="text" id="current-text" value="Text" />
+						</div>
 						<div class="current-font-size">
 							<div class="font-size-slider-wrapper slider-wrapper">
 								<dl>
@@ -99,7 +143,28 @@
 						</div>
 					</div>
 					<div class="column">
-						<div class="current-font-style row-wrapper">							<strong>Select font-style: </strong>							<div class="row">								<label for="current-font-style-normal">normal</label>								<input type="radio" id="current-font-style-normal" name="current-font-style" checked="checked" value="normal" />							</div>							<div class="row">								<label for="current-font-style-italic">italic</label>								<input type="radio" id="current-font-style-italic" name="current-font-style" value="italic" />							</div>						</div>						<div class="current-font-weight row-wrapper">							<strong>Select font-style: </strong>							<div class="row">								<label for="current-font-weight-normal">normal</label>								<input type="radio" id="current-font-weight-normal" name="current-font-weight" checked="checked" value="normal" />							</div>							<div class="row">								<label for="current-font-weight-bold">bold</label>								<input type="radio" id="current-font-weight-bold" name="current-font-weight" value="bold" />							</div>						</div>
+						<div class="current-font-style row-wrapper">
+							<strong>Select font-style: </strong>
+							<div class="row">
+								<label for="current-font-style-normal">normal</label>
+								<input type="radio" id="current-font-style-normal" name="current-font-style" checked="checked" value="normal" />
+							</div>
+							<div class="row">
+								<label for="current-font-style-italic">italic</label>
+								<input type="radio" id="current-font-style-italic" name="current-font-style" value="italic" />
+							</div>
+						</div>
+						<div class="current-font-weight row-wrapper">
+							<strong>Select font-style: </strong>
+							<div class="row">
+								<label for="current-font-weight-normal">normal</label>
+								<input type="radio" id="current-font-weight-normal" name="current-font-weight" checked="checked" value="normal" />
+							</div>
+							<div class="row">
+								<label for="current-font-weight-bold">bold</label>
+								<input type="radio" id="current-font-weight-bold" name="current-font-weight" value="bold" />
+							</div>
+						</div>
 						<div class="current-font">
 							<label for="current-font">Font: </label>
 							<select id="current-font">
@@ -120,7 +185,15 @@
 				</div>
 				<div class="insert-image">
 					<div class="column">
-						<div class="current-picture-width">							<div class="picture-width-slider-wrapper slider-wrapper">								<dl>									<dt>Picture width: </dt>									<dd class="picture-width-slider-value slider-value"></dd>								</dl>								<div class="picture-width-slider slider"></div>							</div>						</div>
+						<div class="current-picture-width">
+							<div class="picture-width-slider-wrapper slider-wrapper">
+								<dl>
+									<dt>Picture width: </dt>
+									<dd class="picture-width-slider-value slider-value"></dd>
+								</dl>
+								<div class="picture-width-slider slider"></div>
+							</div>
+						</div>
 						<div class="current-picture-height">
 							<div class="picture-height-slider-wrapper slider-wrapper">
 								<dl>
@@ -140,7 +213,17 @@
 								</dl>
 								<div class="picture-angle-slider slider"></div>
 							</div>
-						</div>						<form action="#">							<div class="row">								<label for="set-original-picture-size">Insert with original size</label>								<input type="checkbox" class="set-original-picture-size" id="set-original-picture-size" />							</div>							<div class="row">								<label for="picture-fit-to-canvas">Fit picture to canvas</label>								<input type="checkbox" class="picture-fit-to-canvas" id="picture-fit-to-canvas" />							</div>						</form>
+						</div>
+						<form action="#">
+							<div class="row">
+								<label for="set-original-picture-size">Insert with original size</label>
+								<input type="checkbox" class="set-original-picture-size" id="set-original-picture-size" />
+							</div>
+							<div class="row">
+								<label for="picture-fit-to-canvas">Fit picture to canvas</label>
+								<input type="checkbox" class="picture-fit-to-canvas" id="picture-fit-to-canvas" />
+							</div>
+						</form>
 					</div>
 				</div>
 				<div class="image-upload-wrapper" title="Upload image dialog">
@@ -151,7 +234,8 @@
 						</div>
 						<div class="image-upload-content">
 							<div class="overflow">
-								<div class="callback-info"></div>								<input type="file" name="file" class="input-file" id="file" />
+								<div class="callback-info"></div>
+								<input type="file" name="file" class="input-file" id="file" />
 							</div>
 							<input type="reset" value="Reset form" />
 							<input type="submit" value="Submit" />
@@ -175,14 +259,18 @@
 				</div>
 				<div class="zoomer-wrapper">
 					<div class="zoomer-box" title="canvas zoomer">
-						<div class="zoomer"></div>						<div class="zoomer-cache-array"></div>						<img class="target" src="images/img-target.png" alt="image description" />
+						<div class="zoomer"></div>
+						<div class="zoomer-cache-array"></div>
+						<img class="target" src="images/img-target.png" alt="image description" />
 					</div>
 					<div class="zoomer-slider slider"></div>
 					<div class="zoomer-slider-value"></div>
 				</div>
 				<div class="cursor-wrapper" title="brush size/opacity preview">
 					<div class="cursor-box">
-						<div class="cursor"></div>						<div class="cursor-cache-array"></div>					</div>
+						<div class="cursor"></div>
+						<div class="cursor-cache-array"></div>
+					</div>
 				</div>
 				<div class="flip-wrapper">
 					<a class="flip-horizontal" href="#"><img title="Flip horizontal" src="images/img-flip-horizontal.png" alt="Flip horizontal" width="32" height="32" /></a>
@@ -191,26 +279,19 @@
 				<div class="drag-and-drop-message">
 					You can drag and drop image file in browser window.
 				</div>
-			</div>			<div class="tool"><!-- this tool box need for enabled selection on input -->				<div class="picker-wrapper brush-color-picker-wrapper" title="Brush color">
-					<div class="brush-color-picker color-selector"><div></div></div>				</div>
+			</div>
+			<div class="tool"><!-- this tool box need for enabled selection on input -->
+				<div class="picker-wrapper brush-color-picker-wrapper" title="Brush color">
+					<div class="brush-color-picker color-selector"><div></div></div>
+				</div>
 				<div class="picker-wrapper fill-picker-wrapper" title="Fill color">
 					<div class="fill-picker color-selector"><div></div></div>
 				</div>
-			</div>			<div class="hidden">
+			</div>
+			<div class="hidden">
 				<img class="cursor-icon" src="images/cursor-brush.cur" alt="image description" />
-			</div>		</div>
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript">
-	<!--
-		document.write("<a style='display:none !important;' href='http://www.liveinternet.ru/click' "+
-		"target=_blank><img src='//counter.yadro.ru/hit?t38.6;r"+
-		escape(document.referrer)+((typeof(screen)=="undefined")?"":
-		";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-		screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-		";"+Math.random()+
-		"' alt='' title='LiveInternet' "+
-		"border='0' width='31' height='31'><\/a>")
-	//-->
-	</script>
 </body>
 </html>
